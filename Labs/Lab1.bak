@@ -1,0 +1,15 @@
+#lang racket
+
+(+ 3 5 8 1)
+
+(- 5 3 1)
+
+(* 5 3)
+
+(-(/ (+ 5 3) 2)2)
+
+'(1 2 3_a b)
+
+(define plusone (lambda (x y) (+ 1 x y)))
+
+(plusone 300 20)

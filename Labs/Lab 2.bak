@@ -1,0 +1,42 @@
+#lang racket
+
+;The empty list
+null
+
+;Constructing a list
+(cons 5 null)
+(cons 4 (cons 5 null))
+
+
+;Shorthand for creating a list
+(list 1 2 3 4 5)
+(define l (list 1 2 3 4 5))
+
+;popping the first element of the list
+(car l)
+(cdr l)
+
+;check if a list in empty
+(null? l)
+
+;true and false
+#t
+#f
+
+;sum function - take a ist of numbers and add them
+(define (sum l)
+  (if (null? l)
+  0
+  (+ (car l) (sum (cdr l)))))
+
+  (sum (list 1 2 3 4 5 ))
+
+;=====================================================
+
+;Factorial function
+(define (fac n)
+  (if (= n 1)
+      1
+      (* n (fac (- n 1)))))
+(fac 3)
+
